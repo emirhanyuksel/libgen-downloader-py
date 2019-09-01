@@ -72,5 +72,5 @@ if args.interactive:
     else:
         download_book(choice, True)
 else:
-    download_book(False)
+    download_book()
         
