@@ -44,7 +44,7 @@ def download_book(choice=1, interactive=False):
     down_url = "http://93.174.95.29/_ads/" + chosen_link
     
     down = requests.get(down_url)
-    down_page = "http://93.174.95.29" + bs4.BeautifulSoup(down.text, features="lxml").a['href']
+    down_page = bs4.BeautifulSoup(down.text, features="lxml").a['href']
 
     if interactive:
         name = input("Enter a filename(optional): ")
